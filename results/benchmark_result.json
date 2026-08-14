@@ -1,0 +1,45 @@
+{
+  "environment": {
+    "instance_type": "t3.medium (CPU)",
+    "cpu_count": 2,
+    "python": "3.10.12",
+    "lightgbm": "4.7.0",
+    "platform": "Linux-6.8.0-1061-aws-x86_64-with-glibc2.35"
+  },
+  "dataset": {
+    "rows": 284807,
+    "features": 30,
+    "fraud_count": 492,
+    "fraud_ratio_pct": 0.1727,
+    "train_rows": 182276,
+    "valid_rows": 45569,
+    "test_rows": 56962
+  },
+  "timing": {
+    "load_data_sec": 2.3162,
+    "training_sec": 3.0403,
+    "best_iteration": 41
+  },
+  "metrics": {
+    "auc_roc": 0.886823,
+    "accuracy": 0.956497,
+    "f1_score": 0.061364,
+    "precision": 0.031865,
+    "recall": 0.826531,
+    "confusion_matrix": {
+      "tn": 54403,
+      "fp": 2461,
+      "fn": 17,
+      "tp": 81
+    }
+  },
+  "inference": {
+    "latency_1row_ms": {
+      "mean": 0.4486,
+      "p50": 0.4383,
+      "p95": 0.4652
+    },
+    "batch_1000rows_ms": 1.8326,
+    "throughput_rows_per_sec": 545681.81
+  }
+}

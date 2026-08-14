@@ -1,0 +1,27 @@
+==============================================================
+ LAB 16 - LightGBM Fraud Detection Benchmark (CPU / t3.medium)
+==============================================================
+
+[1] LOAD DATA
+    Rows x Cols : 284,807 x 31
+    Fraud       : 492 (0.173%)
+    Load time   : 2.316 s
+
+[2] TRAINING  (threads=2, max 1000 rounds, early stop 50)
+    Train time     : 3.040 s
+    Best iteration : 41
+
+[3] EVALUATION  (test = 56,962 rows)
+    AUC-ROC   : 0.886823
+    Accuracy  : 0.956497
+    F1-Score  : 0.061364
+    Precision : 0.031865
+    Recall    : 0.826531
+    Confusion : TN=54403 FP=2461 FN=17 TP=81
+
+[4] INFERENCE
+    Latency 1 row   : mean 0.449 ms | p50 0.438 ms | p95 0.465 ms
+    Batch 1000 rows : 1.833 ms  ->  545,682 rows/s
+
+[5] Saved -> /home/ubuntu/ml-benchmark/benchmark_result.json
+==============================================================
